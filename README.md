@@ -1,40 +1,70 @@
-# github-pages-boilerplate
+# Getting Started with Create React App
 
-A (fairly) minimal example of how to host a modern single page app on Github Pages.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-See live at [github-pages-spa.gfm.io](https://github-pages-spa.gfm.io).
+## Available Scripts
 
-The idea for this setup comes from and part of the code base is based on [a minimal example by @rafrex](https://github.com/rafrex/spa-github-pages).
+In the project directory, you can run:
 
-## Overview
+### `npm start`
 
-This repository provides a working configuration for building a modern single page app using TypeScript, SCSS, React, react-router and webpack. `tslint` is set up and configured and so are `mocha` and `chai` as test suites. `webpack-dev-server` can be used during development for live reload. `Favicons, app icons, manifests and other static files are generated automatically. Webpack is configured for code splitting to enable better caching. All production assets are named to include a content hash for aggressive caching.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The `release` script is confiugured to lint the source code, run the tests, build a production build and push all generated output to the `gh-pages` branch, from which the app gets served on Github Pages. SSL should work out of the box, including with custom domains. "Nice URLs" are supported via a small hack enabling URL rewriting using a `404.html` page and then regular routing using `react-router`.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## Directory structure
+### `npm test`
 
-* `config`: Contains all build config
-* `src`: All source files and assets
-* `src/app`: All TypeScript source code of the actual app
-* `src/scss`: SCSS source code for the stylesheet (the webpack loaders that automatically compile and include the stylesheets are of course configured)
-* `src/favicon/favicon.png`: The base graphic for all favicons and web app icons
-* `src/html`: HTML files
-* `src/html/404.html`: Helper file that fill receive all HTTP requests that do not resolve to an actual file in Github pages. It extracts the URL and redirects to the `index.html` with an appropriate URL parameter.
-* `src/html/index.html`: The template of the actual entrypoint file to the app. It will process the URL parameter from `404.html`, if present, and rewrite it to the original URL in the URL bar in the browser. It then loads the single page app, which will display the desired page.
-* `src/assets`: For image assets and similar
-* `src/CNAME`: The CNAME file containing the custom URL to use with Github pages.
-* `src/.nojekyll`: Helper file to disable Jekyll on Github Pages.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Commands
+### `npm run build`
 
-...
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## To Do
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-* Better design
-* Write the README / docs
-* Add docs to actual page
-* Add development and set up branch protection
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## License: MIT
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
